@@ -1,20 +1,26 @@
 import React from "react";
 import "./App.css";
 import PropTypes from "prop-types";
-export default function Navbar(prop) {
+export default function Navbar(propy) {
   const toggleColor = () =>
   {
-   document.body.classList.toggle("body-color")
+   document.body.classList.toggle("body-color");
+   if(document.body.classList.contains("body-color")){
+    propy.showAlert("Dark mode enabled","Success");
+   }
+   else{
+    propy.showAlert("Light mode enabled","Success");
+   }
   }
-  // if(document.body.classList.contains('body-color'))
-  // {
-  //   prop.showAlert("Hii","me");
-  // }
+  if(document.body.classList.contains('body-color'))
+  {
+    
+  }
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          {prop.title}
+          {propy.title}
         </a>
         <button
           className="navbar-toggler"
@@ -36,7 +42,7 @@ export default function Navbar(prop) {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                {prop.aboutprops}
+                {propy.aboutprops}
               </a>
             </li>
           </ul>
