@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Alert from './Alert';
 import Textform from "./Textform";
 import { useState } from "react";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 function App() {
   const [alert,setAlert] = useState(null);
   const showAlert = (message,type)=>{
